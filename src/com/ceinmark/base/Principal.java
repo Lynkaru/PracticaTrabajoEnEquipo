@@ -12,7 +12,7 @@ public class Principal {
 		switch (operacion) {
 		case "SUMA":
 			break;
-		case "RESTA":
+		case "RESTA":resta(ent);
 			break;
 		case "MULTIPLICACIÓN":
 			break;
@@ -24,6 +24,16 @@ public class Principal {
 
 	}// fin main
 
-	
+	public static void resta(Scanner ent) {
+		
+		System.out.println("Ingresa el primer numero: ");
+		int a = Integer.parseInt(ent.nextLine());
+		
+		System.out.println("Ingresa el segundo numero: ");
+		int b= Integer.parseInt(ent.nextLine());
+		
+		System.out.println("El resultado es: " + (a-=b));
+		
+	}
 
 }
