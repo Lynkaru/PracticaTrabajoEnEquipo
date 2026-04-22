@@ -17,6 +17,7 @@ public class Principal {
 		case "MULTIPLICACIÓN":
 			break;
 		case "DIVISIÓN":
+			division(ent);
 			break;
 		default:
 			System.out.println("Esta opción no está disponible");
@@ -24,6 +25,23 @@ public class Principal {
 
 	}// fin main
 
-	
+	public static void division(Scanner ent) {
+		boolean divCero = true;
+		double num = 0;
+		double div = 0;
+		do {
+			System.out.println("Ingresa el número");
+			num = Double.parseDouble(ent.nextLine());
+			System.out.println("Ingresa el divisor");
+			div = Double.parseDouble(ent.nextLine());
+			if (div == 0) {
+				System.out.println("El divisor no puede ser 0");
+			} else {
+				divCero = false;
+			}
+		} while (divCero);
+
+		System.out.println("El resultado es: " + (num / div));
+	}// fin division
 
 }
