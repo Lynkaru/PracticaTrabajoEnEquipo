@@ -15,6 +15,7 @@ public class Principal {
 		case "RESTA":
 			break;
 		case "MULTIPLICACIÓN":
+			multiplicacion(ent);
 			break;
 		case "DIVISIÓN":
 			break;
@@ -24,6 +25,13 @@ public class Principal {
 
 	}// fin main
 
-	
+	public static void multiplicacion(Scanner ent) {
+		System.out.println("Ingresa el primer numero");
+		double num1 = Double.parseDouble(ent.nextLine());
+		System.out.println("Ingresa el segundo numero");
+		double num2 = Double.parseDouble(ent.nextLine());
+		System.out.println("El resultado es: " + (num1 * num2));
+
+	}
 
 }
