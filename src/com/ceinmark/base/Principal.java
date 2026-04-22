@@ -18,12 +18,14 @@ public class Principal {
 			multiplicacion(ent);
 			break;
 		case "DIVISIÓN":
+			division(ent);
 			break;
 		default:
 			System.out.println("Esta opción no está disponible");
 		}// fin switch case
 
 	}// fin main
+
 
   public static void suma(Scanner ent) {
 		System.out.println("introduce el primer numero para sumar");
@@ -52,6 +54,23 @@ public class Principal {
 		System.out.println("El resultado es: " + (num1 * num2));
   }
 
-	
+	public static void division(Scanner ent) {
+		boolean divCero = true;
+		double num = 0;
+		double div = 0;
+		do {
+			System.out.println("Ingresa el número");
+			num = Double.parseDouble(ent.nextLine());
+			System.out.println("Ingresa el divisor");
+			div = Double.parseDouble(ent.nextLine());
+			if (div == 0) {
+				System.out.println("El divisor no puede ser 0");
+			} else {
+				divCero = false;
+			}
+		} while (divCero);
+
+		System.out.println("El resultado es: " + (num / div));
+	}// fin division
 
 }
